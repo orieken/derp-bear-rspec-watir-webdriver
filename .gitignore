@@ -1,7 +1,9 @@
 *.gem
 *.rbc
+*.log
 .bundle
 .config
+.idea
 coverage
 InstalledFiles
 lib/bundler/man

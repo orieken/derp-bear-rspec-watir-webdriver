@@ -1,0 +1,3 @@
+---
+browser: <% "#{ENV['BROWSER']}" %>
+driver: watir_webdriver

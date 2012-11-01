@@ -1,0 +1,6 @@
+---
+isolation: &isolation
+    :url: http://derp-bear.herokuapp.com/
+
+integration:
+    <<: *isolation
