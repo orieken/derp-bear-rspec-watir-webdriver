@@ -47,9 +47,9 @@ additional configuration on your end may be required to set up the proper [WebDr
 
 ## Additional examples
 
-[Using Selenium-WebDriver and RSpec](https://github.com/orieken/derp-bear-rspec-selenium-webdriver)
-[Using Watir-WebDriver and Cucumber]()
-[Using Selenium-WebDriver and Cucumber]()
+- [Using Selenium-WebDriver and RSpec](https://github.com/orieken/derp-bear-rspec-selenium-webdriver)
+- [Using Watir-WebDriver and Cucumber]()
+- [Using Selenium-WebDriver and Cucumber]()
 
 
 ##Videos of how I wrote the tests coming soon
