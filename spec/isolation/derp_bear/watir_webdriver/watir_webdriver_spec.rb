@@ -49,6 +49,16 @@ describe "RSpec and Watir-WebDriver" do
 
           nav_links_text.should eql %w{HOME ABOUT}
         end
+
+        it "should let me locate the nav link text using css" do
+          nav_text = []
+          nav_items = browser.elements(css: 'nav#primary ul li')
+          nav_items.each do |item|
+            nav_text << item.text
+          end
+          nav_text.should eql  %w{HOME ABOUT}
+
+        end
       end #nav area
 
       context "Content Area" do
@@ -73,29 +83,35 @@ describe "RSpec and Watir-WebDriver" do
         end
 
         context "examples list" do
-        it "should be present" do
-          browser.section(id: "content").ul(id: "examples").should be_present
-        end
+          it "should be present" do
+            browser.section(id: "content").ul(id: "examples").should be_present
+          end
 
-        it "should have 2 examples" do
-          browser.section(id: "content").ul(id: "examples").lis.count.should be 2
-        end
+          it "should let me locate examples list with css" do
+            first_li = browser.elements(css: 'section#content ul#examples li').first
+            first_li.text.should eql 'Basic Form Example'
+          end
 
-        it "should have a Basic Example" do
-          browser.li(id: "basic_form_example").should be_present
-        end
+          it "should have 2 examples" do
+            browser.section(id: "content").ul(id: "examples").lis.count.should be 2
+          end
 
-        it "should have a Basic Example inside the Examples list" do
-          browser.ul(id: "examples").li(text: "Basic Form Example").should be_present
-        end
+          it "should have a Basic Example" do
+            browser.li(id: "basic_form_example").should be_present
+          end
 
-        it "should have a Basic Example text" do
-          browser.ul(id: "examples").li(id: "basic_form_example").text.should eql "Basic Form Example"
-        end
+          it "should have a Basic Example inside the Examples list" do
+            browser.ul(id: "examples").li(text: "Basic Form Example").should be_present
+          end
 
-        it "should have an Advanced Example" do
-          browser.li(id: "advanced_form_example").should be_present
-        end
+          it "should have a Basic Example text" do
+            browser.ul(id: "examples").li(id: "basic_form_example").text.should eql "Basic Form Example"
+          end
+
+          it "should have an Advanced Example" do
+            browser.li(id: "advanced_form_example").should be_present
+          end
+
 
 
         end #examples list
