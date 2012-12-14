@@ -1,8 +1,10 @@
-ENV['TAZA_ENV'] = "isolation" if ENV['TAZA_ENV'].nil?
 require 'rubygems'
 require 'rspec'
 require 'mocha'
 require 'watir-webdriver'
+require 'pry'
+require 'pry-nav'
+
 
 TAZA_ROOT=File.join(File.dirname(__FILE__), '../')
 
@@ -16,5 +18,5 @@ RSpec.configure do |config|
 end
 
 #set defaults
-(ENV['TAZA_ENV'] ||= 'isolation').downcase
+ENV['TAZA_ENV'] ||= 'isolation'
 (ENV['BROWSER'] ||= 'chrome').downcase

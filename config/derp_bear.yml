@@ -4,3 +4,5 @@ isolation: &isolation
 
 integration:
     <<: *isolation
+test:
+    :url: localhost:9393
