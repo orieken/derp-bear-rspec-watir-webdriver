@@ -5,7 +5,7 @@ describe "Derp Bear using RSpec and Watir-WebDriver" do
   let(:browser) { Watir::Browser.new :chrome }
 
   before(:each) do
-    browser.goto "localhost:9393"
+    browser.goto "http://derp-bear.herokuapp.com/"
     browser.li(id: 'kendoui_example').link.click
   end
 
@@ -17,7 +17,7 @@ describe "Derp Bear using RSpec and Watir-WebDriver" do
     context "DropDownlist Example" do
       it "should let me customize the color of my cap" do
         browser.span(class: 'k-input').click
-        browser.li(text: 'Grey').click
+        browser.li(text: 'Grey').when_present.click
         browser.button(id: 'get').click
         pop_up_message = browser.alert.text
         browser.alert.exists?
@@ -37,9 +37,9 @@ describe "Derp Bear using RSpec and Watir-WebDriver" do
 
       it "should alert me with my custom cap color and size" do
         browser.div(id: 'cap_color').span(class: 'k-input').click
-        browser.li(text: 'Orange').click
+        browser.li(text: 'Orange').when_present.click
         browser.div(id: 'cap_size').span(class: 'k-input').click
-        browser.li(text: 'L - 7 1/8').click
+        browser.li(text: 'L - 7 1/8').when_present.click
         browser.button(id: 'get').click
         pop_up_message = browser.alert.text
         browser.alert.exists?
