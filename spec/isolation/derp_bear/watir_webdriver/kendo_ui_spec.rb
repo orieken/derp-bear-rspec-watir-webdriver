@@ -46,9 +46,6 @@ describe "Derp Bear using RSpec and Watir-WebDriver" do
         browser.alert.ok
         pop_up_message.should include("Thank you! Your Choice is:\n\nColor ID: Orange and Size: L - 7 1/8")
       end
-
-
-
     end
 
   end
