@@ -28,6 +28,16 @@ describe "RSpec and Watir-WebDriver" do
           browser.div(id: "msg").span.exists?
         end
 
+        it "should have the span by class" do
+          browser.span(class: "this_span_class").exists?.should be_true
+        end
+
+        it "should check span loaded by the button" do
+
+          browser.button(id: "submit_button").click
+          p browser.div(class: "msg_span_class").span.exists?
+        end
+
         it "should have the div" do
           browser.div(id: "this_div").exists?
         end

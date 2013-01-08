@@ -18,5 +18,5 @@ RSpec.configure do |config|
 end
 
 #set defaults
-ENV['TAZA_ENV'] ||= 'isolation'
-(ENV['BROWSER'] ||= 'chrome').downcase
+ENV['TAZA_ENV'] ||= 'test'
+(ENV['BROWSER'] ||= 'firefox').downcase
