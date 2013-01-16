@@ -92,8 +92,8 @@ describe "RSpec and Watir-WebDriver" do
             first_li.text.should eql 'Basic Form Example'
           end
 
-          it "should have 5 examples" do
-            browser.section(id: "content").ul(id: "examples").lis.count.should be 5
+          it "should have 7 examples" do
+            browser.section(id: "content").ul(id: "examples").lis.count.should be 7
           end
 
           it "should have a Basic Example" do

@@ -2,7 +2,7 @@ require 'rubygems'
 require 'taza/page'
 
 module DerpBear
-  class HomePage < ::Taza::Page
+  class KendoUiPage < ::Taza::Page
 
     element(:title) { browser.title }
 
