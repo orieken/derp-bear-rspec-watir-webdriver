@@ -5,7 +5,7 @@ describe "Derp Bear using RSpec and Watir-WebDriver" do
   let(:browser) { Watir::Browser.new :chrome }
 
   before(:each) do
-    browser.goto "http://derp-bear.herokuapp.com/"
+    browser.goto "http://localhost:9393/"
     browser.li(id: 'kendoui_example').link.click
   end
 

@@ -19,4 +19,4 @@ end
 
 #set defaults
 ENV['TAZA_ENV'] ||= 'isolation'
-(ENV['BROWSER'] ||= 'firefox').downcase
+(ENV['BROWSER'] ||= 'chrome').downcase

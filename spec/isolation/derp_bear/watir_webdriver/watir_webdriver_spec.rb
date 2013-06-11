@@ -5,7 +5,7 @@ describe "RSpec and Watir-WebDriver" do
   let(:browser) { Watir::Browser.new :chrome }
 
   before(:each) do
-    browser.goto "http://derp-bear.herokuapp.com/"
+    browser.goto "http://localhost:9393/"
   end
 
   after(:each) do
@@ -92,8 +92,8 @@ describe "RSpec and Watir-WebDriver" do
             first_li.text.should eql 'Basic Form Example'
           end
 
-          it "should have 7 examples" do
-            browser.section(id: "content").ul(id: "examples").lis.count.should be 7
+          it "should have 10 examples" do
+            browser.section(id: "content").ul(id: "examples").lis.count.should be 10
           end
 
           it "should have a Basic Example" do
