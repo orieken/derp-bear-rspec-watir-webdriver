@@ -5,7 +5,7 @@ describe "Derp Bear using RSpec and Watir-WebDriver" do
   let(:browser) { Watir::Browser.new :chrome }
 
   before(:each) do
-    browser.goto "http://localhost:9393/"
+    browser.goto "http://derp-bear-rspec-watir/"
     browser.li(id: 'sencha_touch_example').link.click
   end
 

@@ -5,7 +5,7 @@ describe "RSpec and Watir-WebDriver" do
   let(:browser) { Watir::Browser.new :chrome }
 
   before(:each) do
-    browser.goto "http://localhost:9393/"
+    browser.goto "http://derp-bear-rspec-watir/"
   end
 
   after(:each) do

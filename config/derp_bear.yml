@@ -1,6 +1,6 @@
 ---
 isolation: &isolation
-    :url: http://localhost:9393/
+    :url: http://derp-bear-rspec-watir/
 
 integration:
     <<: *isolation
