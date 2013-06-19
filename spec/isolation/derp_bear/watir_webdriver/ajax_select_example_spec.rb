@@ -5,8 +5,9 @@ describe "RSpec and Watir-WebDriver" do
   let(:browser) { Watir::Browser.new :chrome }
 
   before(:each) do
-    browser.goto "http://localhost:9393/"
-    browser.li(id: 'ajax_select_example').link.click
+    #browser.goto "http://localhost:9393/"
+    browser.goto "http://derp-bear.herokuapp.com"
+    browser.link(id: 'ajax_select_example').click
   end
 
   after(:each) do

@@ -7,17 +7,17 @@ module DerpBear
     element(:title) { browser.title }
 
     #examples section
-    element(:examples) {browser.ul(id: 'examples')}
-    element(:basic_form) { browser.li(id: 'basic_form_example').link}
-    element(:present_elements) { browser.li(id: 'present_elements_example').link }
-    element(:advanced_form) { browser.li(id: 'advanced_form_example').link }
-    element(:accordion) { browser.li(id: 'accordion_example').link }
-    element(:jquery_accordion) { browser.li(id: 'accordion_jquery_example').link }
-    element(:ajax_select) { browser.li(id: 'ajax_select_example').link }
+    element(:examples) { browser.ul(id: 'examples') }
+    element(:basic_form) { browser.link(id: 'basic_form_example') }
+    element(:present_elements) { browser.link(id: 'present_elements_example') }
+    element(:advanced_form) { browser.link(id: 'advanced_form_example') }
+    element(:accordion) { browser.link(id: 'accordion_example') }
+    element(:jquery_accordion) { browser.link(id: 'accordion_jquery_example') }
+    element(:ajax_select) { browser.link(id: 'ajax_select_example') }
     #again we could even do something like this
-    # @site.home_page.example_type("basic_form")
-    # @site.home_page.example_type("advanced_form")
-    element(:example_type) { |type| browser.li(id: "#{type}_example").link }
+    # @site.home_page.example_type("Basic Form")
+    # @site.home_page.example_type("Advanced Form")
+    element(:example_type) { |type| browser.link(id: "#{type.gsub(' ',"_").downcase}_example") }
 
 
   end
